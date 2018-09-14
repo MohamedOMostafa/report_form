@@ -210,7 +210,9 @@ class ReportForm extends Component {
     this.setState({
       classes: this.state.classes.filter(classItem => classItem.id != id)
     });
-    this.handleCourseChange.call(this);
+    setTimeout(() => {
+      this.handleCourseChange.call(this);
+    }, 0);
   }
 
   removeFromClasses(collection, key) {
